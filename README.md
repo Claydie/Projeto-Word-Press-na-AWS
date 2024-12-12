@@ -334,15 +334,14 @@ O WordPress buscará automaticamente as configurações do banco de dados a part
   título do site e credenciais de administrador.
 
   ---
-  14. **Auto Scaling**
+ 14. **Auto Scaling**
 
   - Configuração.
-  - 
   - Criar o grupo de auto scaling.
 
   - **Etapa 1 (inicial**)
-  - Nome
-  - Modelo de execução (colocar modelo salvo)
+  - Nome (nome de sua preferência)
+  - Modelo de execução (colocar modelo salvo no tamplede)
   - Versão (sempre a ultima)(latest)
 
   - **Etapa 2 (VPC e Subnet)**
