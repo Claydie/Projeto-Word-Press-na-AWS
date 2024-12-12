@@ -44,8 +44,8 @@ services:
      - 8080:80
     environment:
       WORDPRESS_DB_HOST: meurds.clmaosiuuys5.us-east-1.rds.amazonaws.com                       
-      WORDPRESS_DB_USER: admin
-      WORDPRESS_DB_PASSWORD: admin2810
+      WORDPRESS_DB_USER: usuario
+      WORDPRESS_DB_PASSWORD: senha da sua preferencia
       WORDPRESS_DB_NAME: wordpressdb
     volumes:
      - /efs/site:/var/www/html
