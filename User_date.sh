@@ -29,7 +29,7 @@ sudo apt install nfs-common -y
 
 # Criar ponto de montagem do EFS
 mkdir -p /efs
-sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-00902aceb545d4054.efs.us-east-1.amazonaws.com:/ /efs
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-xxxxxxxxxxxxxxx.efs.us-east-1.amazonaws.com:/ /efs
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
@@ -43,8 +43,8 @@ services:
     ports:
      - 8080:80
     environment:
-      WORDPRESS_DB_HOST: meurds.clmaosiuuys5.us-east-1.rds.amazonaws.com                       
-      WORDPRESS_DB_USER: usuario
+      WORDPRESS_DB_HOST: endpoint do RDS                       
+      WORDPRESS_DB_USER: usuario da sua preferencia
       WORDPRESS_DB_PASSWORD: senha da sua preferencia
       WORDPRESS_DB_NAME: wordpressdb
     volumes:
