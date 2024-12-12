@@ -21,6 +21,7 @@ Projeto com o intuito de demonstrar como funciona a  implementação e uma aplic
   - [11. Configuração do Load Balancer Clássico](#11-configuração-do-load-balancer-clássico)
   - [12. Implantação do WordPress com Docker](#12-implantação-do-wordpress-com-docker)
   - [13. Testes e Validação](#13-testes-e-validação)
+  - [14. Auto Scaling](#14-Auto-Scaling)
 - [Referências](#referências) 
 
 
@@ -330,7 +331,40 @@ O WordPress buscará automaticamente as configurações do banco de dados a part
 - Use as credenciais do administrador para configurar seu site.
   
 - Nota: O processo de instalação do WordPress é basicamente a configuração do idioma, banco de dados,  
-  título do site e credenciais de administrador. 
+  título do site e credenciais de administrador.
+
+  ---
+  14. **Auto Scaling**
+
+  - Configuração.
+  - 
+  - Criar o grupo de auto scaling.
+
+  - **Etapa 1 (inicial**)
+  - Nome
+  - Modelo de execução (colocar modelo salvo)
+  - Versão (sempre a ultima)(latest)
+
+  - **Etapa 2 (VPC e Subnet)**
+  - Rede (colocar a VPC salva: projetocompass-vpc)
+  - Subredes (colocar as privada1 e privada2)
+
+  - **Etapa 3 (load balance)**
+  - 1. Balanceamento de carga
+  - Anexar a um load balance existente (adicionar o load balance que vc criou)
+  - 2. Opções de integração do VPC Lattice
+  - Serviço VPC Lattice não disponível
+ 
+  - **Etapa 4 (configuração do Cluster)**
+  - Tamanho do grupo
+  - Capacidade desejada (2)
+  - Escalabilidade
+  - Capacidade mínima desejada (2)
+  - Capacidade maxima desejada (4)
+  - Ajuste de escala automática - opcional - Nenhuma olitica de escalabilidade
+  - Política de manutenção de instâncias - Nenhuma politica
+
+    - As demais opções, não marcar nada, e ir clicando em proximo até chegar na parte de criar auto scaling.
 
 **Referências**
 
